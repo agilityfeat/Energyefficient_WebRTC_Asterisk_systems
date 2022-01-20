@@ -18,7 +18,7 @@ RUN apt-get update && \
     make menuselect.makeopts && \
     menuselect/menuselect \
 
-      # required for asterisk to work ok in docker (check http://stackoverflow.com/a/19610145/920295)
+      # required for asterisk to work ok in docker
       --disable BUILD_NATIVE \
 
       # MENUSELECT_ADDONS category
@@ -42,7 +42,7 @@ RUN apt-get update && \
     rm -rf asterisk-* && \
     sed -i -e 's/# MAXFILES=/MAXFILES=/' /usr/sbin/safe_asterisk && \
 
-    # uninstall wget so that it's not in the image
+    # uninstall wget
     apt-get remove -y wget && \
     rm -rf /var/lib/apt/lists/*
 
