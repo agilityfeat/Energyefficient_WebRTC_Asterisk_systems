@@ -1,0 +1,580 @@
+*CLI> core show channels
+Channel              Location             State   Application(Data)
+PJSIP/altanai-000000 7000@default:2       Up      ConfBridge(webrtc_client)
+PJSIP/altanai-000000 7000@default:2       Up      ConfBridge(webrtc_client)
+PJSIP/altanai-000000 7000@default:2       Up      ConfBridge(webrtc_client)
+PJSIP/altanai-000000 7000@default:2       Up      ConfBridge(webrtc_client)
+PJSIP/altanai-000000 7000@default:2       Up      ConfBridge(webrtc_client)
+CBAnn/webrtc_client- s@default:1          Up      (None)
+CBAnn/webrtc_client- s@default:1          Up      (None)
+7 active channels
+5 active calls
+8 calls processed
+*CLI> core show channel C
+CBAnn/webrtc_client-00000002;1  CBAnn/webrtc_client-00000002;2
+*CLI> core show channel CBAnn/webrtc_client-00000002;1
+ -- General --
+           Name: CBAnn/webrtc_client-00000002;1
+           Type: CBAnn
+       UniqueID: 1642708859.11
+       LinkedID: 1642708859.11
+      Caller ID: (N/A)
+ Caller ID Name: (N/A)
+Connected Line ID: (N/A)
+Connected Line ID Name: (N/A)
+Eff. Connected Line ID: (N/A)
+Eff. Connected Line ID Name: (N/A)
+    DNID Digits: (N/A)
+       Language: en
+          State: Up (6)
+  NativeFormats: (slin)
+    WriteFormat: slin
+     ReadFormat: slin
+ WriteTranscode: No
+  ReadTranscode: No
+ Time to Hangup: 0
+   Elapsed Time: 0h4m13s
+      Bridge ID: (Not bridged)
+ --   PBX   --
+        Context: default
+      Extension: s
+       Priority: 1
+     Call Group: 0
+   Pickup Group: 0
+    Application: (N/A)
+           Data: (Empty)
+ Call Identifer: (None)
+      Variables:
+ -- Streams --
+Name: audio-0
+    Type: audio
+    State: sendrecv
+    Group: -1
+    Formats: (slin)
+    Metadata:
+*CLI> core show channel CBAnn/webrtc_client-00000002;2
+ -- General --
+           Name: CBAnn/webrtc_client-00000002;2
+           Type: CBAnn
+       UniqueID: 1642708859.12
+       LinkedID: 1642708859.11
+      Caller ID: (N/A)
+ Caller ID Name: (N/A)
+Connected Line ID: (N/A)
+Connected Line ID Name: (N/A)
+Eff. Connected Line ID: (N/A)
+Eff. Connected Line ID Name: (N/A)
+    DNID Digits: (N/A)
+       Language: en
+          State: Up (6)
+  NativeFormats: (slin)
+    WriteFormat: slin
+     ReadFormat: slin
+ WriteTranscode: No
+  ReadTranscode: No
+ Time to Hangup: 0
+   Elapsed Time: 0h4m18s
+      Bridge ID: 470c5775-d459-483f-a8b3-1341f23b3b5e
+ --   PBX   --
+        Context: default
+      Extension: s
+       Priority: 1
+     Call Group: 0
+   Pickup Group: 0
+    Application: (N/A)
+           Data: (Empty)
+ Call Identifer: (None)
+      Variables:
+BRIDGEPEER=PJSIP/altanai-00000003,PJSIP/altanai-00000004,PJSIP/altanai-00000005,PJSIP/altanai-00000006,PJSIP/altanai-00000007
+ -- Streams --
+Name: audio-0
+    Type: audio
+    State: sendrecv
+    Group: -1
+    Formats: (slin)
+    Metadata:
+*CLI> core show channel CBAnn/webrtc_client-0000000
+CBAnn/webrtc_client-00000002;1  CBAnn/webrtc_client-00000002;2
+*CLI> core show channel CBAnn/webrtc_client-00000002;
+CBAnn/webrtc_client-00000002;1  CBAnn/webrtc_client-00000002;2
+*CLI> core show channel
+CBAnn/webrtc_client-00000002;1  CBAnn/webrtc_client-00000002;2  PJSIP/altanai-00000003          PJSIP/altanai-00000004          PJSIP/altanai-00000005          PJSIP/altanai-00000006
+PJSIP/altanai-00000007
+*CLI> core show channel P
+PJSIP/altanai-00000003  PJSIP/altanai-00000004  PJSIP/altanai-00000005  PJSIP/altanai-00000006  PJSIP/altanai-00000007
+*CLI> core show channel PJSIP/altanai-0000000
+PJSIP/altanai-00000003  PJSIP/altanai-00000004  PJSIP/altanai-00000005  PJSIP/altanai-00000006  PJSIP/altanai-00000007
+*CLI> core show channel PJSIP/altanai-00000003
+ -- General --
+           Name: PJSIP/altanai-00000003
+           Type: PJSIP
+       UniqueID: 1642708859.10
+       LinkedID: 1642708859.10
+      Caller ID: altanai
+ Caller ID Name: (N/A)
+Connected Line ID: (N/A)
+Connected Line ID Name: (N/A)
+Eff. Connected Line ID: (N/A)
+Eff. Connected Line ID Name: (N/A)
+    DNID Digits: 7000
+       Language: en
+          State: Up (6)
+  NativeFormats: (ulaw|vp8)
+    WriteFormat: slin
+     ReadFormat: slin
+ WriteTranscode: Yes (slin@8000)->(ulaw@8000)
+  ReadTranscode: Yes (ulaw@8000)->(slin@8000)
+ Time to Hangup: 0
+   Elapsed Time: 0h5m14s
+      Bridge ID: 470c5775-d459-483f-a8b3-1341f23b3b5e
+ --   PBX   --
+        Context: default
+      Extension: 7000
+       Priority: 2
+     Call Group: 0
+   Pickup Group: 0
+    Application: ConfBridge
+           Data: webrtc_client
+ Call Identifer: [C-00000004]
+      Variables:
+BRIDGEPEER=CBAnn/webrtc_client-00000002;2,PJSIP/altanai-00000004,PJSIP/altanai-00000005,PJSIP/altanai-00000006,PJSIP/altanai-00000007
+SIPDOMAIN=10.176.2.43
+  CDR Variables:
+level 1: dnid=7000
+level 1: clid="" <altanai>
+level 1: src=altanai
+level 1: dst=7000
+level 1: dcontext=default
+level 1: channel=PJSIP/altanai-00000003
+level 1: dstchannel=PJSIP/altanai-00000004
+level 1: lastapp=ConfBridge
+level 1: lastdata=webrtc_client
+level 1: start=1642708859.772137
+level 1: answer=1642708859.773918
+level 1: end=0.000000
+level 1: duration=313
+level 1: billsec=313
+level 1: disposition=8
+level 1: amaflags=3
+level 1: uniqueid=1642708859.10
+level 1: linkedid=1642708859.10
+level 1: sequence=3
+
+level 2: dnid=7000
+level 2: clid="" <altanai>
+level 2: src=altanai
+level 2: dst=7000
+level 2: dcontext=default
+level 2: channel=PJSIP/altanai-00000003
+level 2: dstchannel=PJSIP/altanai-00000005
+level 2: lastapp=ConfBridge
+level 2: lastdata=webrtc_client
+level 2: start=1642708880.434429
+level 2: answer=1642708880.434429
+level 2: end=0.000000
+level 2: duration=292
+level 2: billsec=292
+level 2: disposition=1
+level 2: amaflags=3
+level 2: uniqueid=1642708859.10
+level 2: linkedid=1642708859.10
+level 2: sequence=6
+
+level 3: dnid=7000
+level 3: clid="" <altanai>
+level 3: src=altanai
+level 3: dst=7000
+level 3: dcontext=default
+level 3: channel=PJSIP/altanai-00000003
+level 3: dstchannel=PJSIP/altanai-00000006
+level 3: lastapp=ConfBridge
+level 3: lastdata=webrtc_client
+level 3: start=1642708912.882990
+level 3: answer=1642708912.882990
+level 3: end=0.000000
+level 3: duration=260
+level 3: billsec=260
+level 3: disposition=1
+level 3: amaflags=3
+level 3: uniqueid=1642708859.10
+level 3: linkedid=1642708859.10
+level 3: sequence=8
+
+level 4: dnid=7000
+level 4: clid="" <altanai>
+level 4: src=altanai
+level 4: dst=7000
+level 4: dcontext=default
+level 4: channel=PJSIP/altanai-00000003
+level 4: dstchannel=PJSIP/altanai-00000007
+level 4: lastapp=ConfBridge
+level 4: lastdata=webrtc_client
+level 4: start=1642708990.153918
+level 4: answer=1642708990.153918
+level 4: end=0.000000
+level 4: duration=183
+level 4: billsec=183
+level 4: disposition=1
+level 4: amaflags=3
+level 4: uniqueid=1642708859.10
+level 4: linkedid=1642708859.10
+level 4: sequence=11
+
+ -- Streams --
+Name: audio-0
+    Type: audio
+    State: sendrecv
+    Group: 0
+    Formats: (ulaw)
+    Metadata:
+        MSID:LABEL: bf080e55-238c-4c5b-a4a6-c5dc94f1a12e
+Name: video-1
+    Type: video
+    State: sendrecv
+    Group: 0
+    Formats: (vp8|h264)
+    Metadata:
+        MSID:LABEL: 60446628-2994-4006-9e4c-8b6bc0fbd67e
+*CLI> core show channel PJSIP/altanai-00000004
+ -- General --
+           Name: PJSIP/altanai-00000004
+           Type: PJSIP
+       UniqueID: 1642708880.13
+       LinkedID: 1642708880.13
+      Caller ID: altanai
+ Caller ID Name: (N/A)
+Connected Line ID: (N/A)
+Connected Line ID Name: (N/A)
+Eff. Connected Line ID: (N/A)
+Eff. Connected Line ID Name: (N/A)
+    DNID Digits: 7000
+       Language: en
+          State: Up (6)
+  NativeFormats: (ulaw|vp8)
+    WriteFormat: slin
+     ReadFormat: slin
+ WriteTranscode: Yes (slin@8000)->(ulaw@8000)
+  ReadTranscode: Yes (ulaw@8000)->(slin@8000)
+ Time to Hangup: 0
+   Elapsed Time: 0h4m55s
+      Bridge ID: 470c5775-d459-483f-a8b3-1341f23b3b5e
+ --   PBX   --
+        Context: default
+      Extension: 7000
+       Priority: 2
+     Call Group: 0
+   Pickup Group: 0
+    Application: ConfBridge
+           Data: webrtc_client
+ Call Identifer: [C-00000005]
+      Variables:
+BRIDGEPEER=CBAnn/webrtc_client-00000002;2,PJSIP/altanai-00000003,PJSIP/altanai-00000005,PJSIP/altanai-00000006,PJSIP/altanai-00000007
+SIPDOMAIN=10.176.2.43
+  CDR Variables:
+level 1: dnid=7000
+level 1: clid="" <altanai>
+level 1: src=altanai
+level 1: dst=7000
+level 1: dcontext=default
+level 1: channel=PJSIP/altanai-00000004
+level 1: dstchannel=PJSIP/altanai-00000005
+level 1: lastapp=ConfBridge
+level 1: lastdata=webrtc_client
+level 1: start=1642708880.374181
+level 1: answer=1642708880.376530
+level 1: end=0.000000
+level 1: duration=295
+level 1: billsec=295
+level 1: disposition=8
+level 1: amaflags=3
+level 1: uniqueid=1642708880.13
+level 1: linkedid=1642708880.13
+level 1: sequence=4
+
+level 2: dnid=7000
+level 2: clid="" <altanai>
+level 2: src=altanai
+level 2: dst=7000
+level 2: dcontext=default
+level 2: channel=PJSIP/altanai-00000004
+level 2: dstchannel=PJSIP/altanai-00000006
+level 2: lastapp=ConfBridge
+level 2: lastdata=webrtc_client
+level 2: start=1642708912.883057
+level 2: answer=1642708912.883057
+level 2: end=0.000000
+level 2: duration=262
+level 2: billsec=262
+level 2: disposition=1
+level 2: amaflags=3
+level 2: uniqueid=1642708880.13
+level 2: linkedid=1642708880.13
+level 2: sequence=9
+
+level 3: dnid=7000
+level 3: clid="" <altanai>
+level 3: src=altanai
+level 3: dst=7000
+level 3: dcontext=default
+level 3: channel=PJSIP/altanai-00000004
+level 3: dstchannel=PJSIP/altanai-00000007
+level 3: lastapp=ConfBridge
+level 3: lastdata=webrtc_client
+level 3: start=1642708990.153939
+level 3: answer=1642708990.153939
+level 3: end=0.000000
+level 3: duration=185
+level 3: billsec=185
+level 3: disposition=1
+level 3: amaflags=3
+level 3: uniqueid=1642708880.13
+level 3: linkedid=1642708880.13
+level 3: sequence=12
+
+ -- Streams --
+Name: audio-0
+    Type: audio
+    State: sendrecv
+    Group: 0
+    Formats: (ulaw)
+    Metadata:
+        MSID:LABEL: 7dab560d-0d26-47b3-98d6-a6986a7c4acd
+Name: video-1
+    Type: video
+    State: sendrecv
+    Group: 0
+    Formats: (vp8|h264)
+    Metadata:
+        MSID:LABEL: 94f6bc95-d9e2-41de-92dd-6f7dc0b38e4b
+*CLI> core show channel PJSIP/altanai-00000005
+ -- General --
+           Name: PJSIP/altanai-00000005
+           Type: PJSIP
+       UniqueID: 1642708912.14
+       LinkedID: 1642708912.14
+      Caller ID: altanai
+ Caller ID Name: (N/A)
+Connected Line ID: (N/A)
+Connected Line ID Name: (N/A)
+Eff. Connected Line ID: (N/A)
+Eff. Connected Line ID Name: (N/A)
+    DNID Digits: 7000
+       Language: en
+          State: Up (6)
+  NativeFormats: (ulaw|vp8)
+    WriteFormat: slin
+     ReadFormat: slin
+ WriteTranscode: Yes (slin@8000)->(ulaw@8000)
+  ReadTranscode: Yes (ulaw@8000)->(slin@8000)
+ Time to Hangup: 0
+   Elapsed Time: 0h4m25s
+      Bridge ID: 470c5775-d459-483f-a8b3-1341f23b3b5e
+ --   PBX   --
+        Context: default
+      Extension: 7000
+       Priority: 2
+     Call Group: 0
+   Pickup Group: 0
+    Application: ConfBridge
+           Data: webrtc_client
+ Call Identifer: [C-00000006]
+      Variables:
+BRIDGEPEER=CBAnn/webrtc_client-00000002;2,PJSIP/altanai-00000003,PJSIP/altanai-00000004,PJSIP/altanai-00000006,PJSIP/altanai-00000007
+SIPDOMAIN=10.176.2.43
+  CDR Variables:
+level 1: dnid=7000
+level 1: clid="" <altanai>
+level 1: src=altanai
+level 1: dst=7000
+level 1: dcontext=default
+level 1: channel=PJSIP/altanai-00000005
+level 1: dstchannel=PJSIP/altanai-00000006
+level 1: lastapp=ConfBridge
+level 1: lastdata=webrtc_client
+level 1: start=1642708912.805394
+level 1: answer=1642708912.818712
+level 1: end=0.000000
+level 1: duration=264
+level 1: billsec=264
+level 1: disposition=8
+level 1: amaflags=3
+level 1: uniqueid=1642708912.14
+level 1: linkedid=1642708912.14
+level 1: sequence=5
+
+level 2: dnid=7000
+level 2: clid="" <altanai>
+level 2: src=altanai
+level 2: dst=7000
+level 2: dcontext=default
+level 2: channel=PJSIP/altanai-00000005
+level 2: dstchannel=PJSIP/altanai-00000007
+level 2: lastapp=ConfBridge
+level 2: lastdata=webrtc_client
+level 2: start=1642708990.153947
+level 2: answer=1642708990.153947
+level 2: end=0.000000
+level 2: duration=187
+level 2: billsec=187
+level 2: disposition=1
+level 2: amaflags=3
+level 2: uniqueid=1642708912.14
+level 2: linkedid=1642708912.14
+level 2: sequence=13
+
+ -- Streams --
+Name: audio-0
+    Type: audio
+    State: sendrecv
+    Group: 0
+    Formats: (ulaw)
+    Metadata:
+        MSID:LABEL: 74ebeabb-40ff-44bf-94a1-8c50ded479a0
+Name: video-1
+    Type: video
+    State: sendrecv
+    Group: 0
+    Formats: (vp8|h264)
+    Metadata:
+        MSID:LABEL: a30f42ad-f1ed-49f7-9273-112e1f1fb335
+*CLI> core show channel PJSIP/altanai-00000006
+ -- General --
+           Name: PJSIP/altanai-00000006
+           Type: PJSIP
+       UniqueID: 1642708990.15
+       LinkedID: 1642708990.15
+      Caller ID: altanai
+ Caller ID Name: (N/A)
+Connected Line ID: (N/A)
+Connected Line ID Name: (N/A)
+Eff. Connected Line ID: (N/A)
+Eff. Connected Line ID Name: (N/A)
+    DNID Digits: 7000
+       Language: en
+          State: Up (6)
+  NativeFormats: (ulaw|vp8)
+    WriteFormat: slin
+     ReadFormat: slin
+ WriteTranscode: Yes (slin@8000)->(ulaw@8000)
+  ReadTranscode: Yes (ulaw@8000)->(slin@8000)
+ Time to Hangup: 0
+   Elapsed Time: 0h3m10s
+      Bridge ID: 470c5775-d459-483f-a8b3-1341f23b3b5e
+ --   PBX   --
+        Context: default
+      Extension: 7000
+       Priority: 2
+     Call Group: 0
+   Pickup Group: 0
+    Application: ConfBridge
+           Data: webrtc_client
+ Call Identifer: [C-00000007]
+      Variables:
+BRIDGEPEER=CBAnn/webrtc_client-00000002;2,PJSIP/altanai-00000003,PJSIP/altanai-00000004,PJSIP/altanai-00000005,PJSIP/altanai-00000007
+SIPDOMAIN=10.176.2.43
+  CDR Variables:
+level 1: dnid=7000
+level 1: clid="" <altanai>
+level 1: src=altanai
+level 1: dst=7000
+level 1: dcontext=default
+level 1: channel=PJSIP/altanai-00000006
+level 1: dstchannel=PJSIP/altanai-00000007
+level 1: lastapp=ConfBridge
+level 1: lastdata=webrtc_client
+level 1: start=1642708990.070138
+level 1: answer=1642708990.080824
+level 1: end=0.000000
+level 1: duration=190
+level 1: billsec=190
+level 1: disposition=8
+level 1: amaflags=3
+level 1: uniqueid=1642708990.15
+level 1: linkedid=1642708990.15
+level 1: sequence=7
+
+ -- Streams --
+Name: audio-0
+    Type: audio
+    State: sendrecv
+    Group: 0
+    Formats: (ulaw)
+    Metadata:
+        MSID:LABEL: b239f9f0-a93d-43e7-acd4-3e70dcdfb2a3
+Name: video-1
+    Type: video
+    State: sendrecv
+    Group: 0
+    Formats: (vp8|h264)
+    Metadata:
+        MSID:LABEL: b13c5e2a-70e2-430e-a86f-2b197b82a700
+*CLI> core show channel PJSIP/altanai-00000007
+ -- General --
+           Name: PJSIP/altanai-00000007
+           Type: PJSIP
+       UniqueID: 1642709001.16
+       LinkedID: 1642709001.16
+      Caller ID: altanai
+ Caller ID Name: (N/A)
+Connected Line ID: (N/A)
+Connected Line ID Name: (N/A)
+Eff. Connected Line ID: (N/A)
+Eff. Connected Line ID Name: (N/A)
+    DNID Digits: 7000
+       Language: en
+          State: Up (6)
+  NativeFormats: (ulaw|vp8)
+    WriteFormat: slin
+     ReadFormat: slin
+ WriteTranscode: Yes (slin@8000)->(ulaw@8000)
+  ReadTranscode: Yes (ulaw@8000)->(slin@8000)
+ Time to Hangup: 0
+   Elapsed Time: 0h3m2s
+      Bridge ID: 470c5775-d459-483f-a8b3-1341f23b3b5e
+ --   PBX   --
+        Context: default
+      Extension: 7000
+       Priority: 2
+     Call Group: 0
+   Pickup Group: 0
+    Application: ConfBridge
+           Data: webrtc_client
+ Call Identifer: [C-00000008]
+      Variables:
+BRIDGEPEER=CBAnn/webrtc_client-00000002;2,PJSIP/altanai-00000003,PJSIP/altanai-00000004,PJSIP/altanai-00000005,PJSIP/altanai-00000006
+SIPDOMAIN=10.176.2.43
+  CDR Variables:
+level 1: dnid=7000
+level 1: clid="" <altanai>
+level 1: src=altanai
+level 1: dst=7000
+level 1: dcontext=default
+level 1: channel=PJSIP/altanai-00000007
+level 1: lastapp=ConfBridge
+level 1: lastdata=webrtc_client
+level 1: start=1642709001.685109
+level 1: answer=1642709001.720392
+level 1: end=1642709001.771868
+level 1: duration=0
+level 1: billsec=0
+level 1: disposition=8
+level 1: amaflags=3
+level 1: uniqueid=1642709001.16
+level 1: linkedid=1642709001.16
+level 1: sequence=10
+
+ -- Streams --
+Name: audio-0
+    Type: audio
+    State: sendrecv
+    Group: 0
+    Formats: (ulaw)
+    Metadata:
+        MSID:LABEL: 4119510e-751d-4512-8e42-7cf2151f52e4
+Name: video-1
+    Type: video
+    State: sendrecv
+    Group: 0
+    Formats: (vp8|h264)
+    Metadata:
+        MSID:LABEL: c933d5fc-baa9-4c47-adde-263cb6807893
