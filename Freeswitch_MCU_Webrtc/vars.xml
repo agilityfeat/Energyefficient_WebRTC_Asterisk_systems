@@ -1,0 +1,42 @@
+ <X-PRE-PROCESS cmd="set" data="bind_server_ip=10.176.2.43"/>
+ <X-PRE-PROCESS cmd="set" data="external_rtp_ip=10.176.2.43"/>
+ <X-PRE-PROCESS cmd="set" data="external_sip_ip=10.176.2.43"/>
+<!--<X-PRE-PROCESS cmd="set" data="add_ice_candidates=true"/>-->
+
+ <!-- change XX to X below to enable -->
+ <XX-PRE-PROCESS cmd="set" data="digits_dialed_filter=(($${df_luhn})|($${df_us_ssn}))"/>
+ 
+ <X-PRE-PROCESS cmd="set" data="sip_tls_version=tlsv1,tlsv1.1,tlsv1.2"/>
+ <X-PRE-PROCESS cmd="set" data="sip_tls_ciphers=ALL:!ADH:!LOW:!EXP:!MD5:@STRENGTH"/>
+ 
+ <!-- Internal SIP Profile -->
+ <X-PRE-PROCESS cmd="set" data="internal_auth_calls=false"/>
+ <X-PRE-PROCESS cmd="set" data="internal_sip_port=5060"/>
+ <X-PRE-PROCESS cmd="set" data="internal_tls_port=5061"/>
+ <X-PRE-PROCESS cmd="set" data="internal_ssl_enable=false"/>
+ 
+ <!-- External SIP Profile -->
+ <X-PRE-PROCESS cmd="set" data="external_auth_calls=false"/>
+ <X-PRE-PROCESS cmd="set" data="external_sip_port=5080"/>
+ <X-PRE-PROCESS cmd="set" data="external_tls_port=5081"/>
+ <X-PRE-PROCESS cmd="set" data="external_ssl_enable=false"/>
+ 
+ <!-- Video Settings -->
+ <!-- Set the max bandwidth -->
+ <X-PRE-PROCESS cmd="set" data="rtp_video_max_bandwidth_in=500mb"/>
+ <X-PRE-PROCESS cmd="set" data="rtp_video_max_bandwidth_out=500mb"/>
+ 
+ <!-- WebRTC Video -->
+ <!-- Suppress CNG(Comfort Noise) for WebRTC Audio -->
+ <X-PRE-PROCESS cmd="set" data="suppress_cng=true"/>
+ <!-- Enable DTMF -->
+ <X-PRE-PROCESS cmd="set" data="rtp_liberal_dtmf=true"/>
+ 
+ <!-- Video Avatars -->
+ <X-PRE-PROCESS cmd="set" data="video_mute_png=$${images_dir}/default-mute.png"/>
+ <X-PRE-PROCESS cmd="set" data="video_no_avatar_png=$${images_dir}/default-avatar.png"/>
+
+<!-- Note : since Im making a local setup I have removed out the stun portion ( I did not comment it since X-PRE-PROCESS line cannot be commented  -->
+
+<X-PRE-PROCESS cmd="stun-set" data="external_rtp_ip=stun:stun.freeswitch.org"/>
+<X-PRE-PROCESS cmd="stun-set" data="external_sip_ip=stun:stun.freeswitch.org"/>
